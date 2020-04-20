@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Poznámkový blok</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+    <link rel="icon" href="/static/img/icon1.png" sizes="16x16">
+</head>
+<body class="pozadi">
+<div class="poznamkaa">
+    <h1>Zapsání poznámek</h1>
+    <form id="poznamka" method="POST">
+        {{ form.csrf_token }}
+        {{ form.poznamka() }}
+        {{ form.dulezitost() }}
+        <input type="submit" value="Uložit">
+    </form>
+    <form action="/vysledky">
+        <input type="submit" value="Uložené poznámky">
+    </form>
+</div>
+</body>
+</html>
