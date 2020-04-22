@@ -61,15 +61,16 @@ def uprav_poznamku(poznamka_id):
     """Upraví poznámku."""
     conn = sqlite3.connect(databaze)
     c = conn.cursor()
-    c.execute("SELECT telo, kdy FROM poznamka WHERE rowid=?", (poznamka_id,))
+    c.execute("SELECT telo, kdy, dulezitost FROM poznamka WHERE rowid=?", (poznamka_id,))
     poznamka_tuple = c.fetchone()
     conn.close()
     form = PoznamkaForm(poznamka=poznamka_tuple[0])
     poznamka_text = form.poznamka.data
+    dulezitost = form.dulezitost.data
     if form.validate_on_submit():
         conn = sqlite3.connect(databaze)
         c = conn.cursor()
-        c.execute("UPDATE poznamka SET telo=? WHERE rowid=?", (poznamka_text, poznamka_id,))
+        c.execute("UPDATE poznamka SET telo=?, dulezitost=? WHERE rowid=?", (poznamka_text, dulezitost, poznamka_id))
         conn.commit()
         conn.close()
         return redirect('/vysledky')
