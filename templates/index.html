@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kámen nůžky papír</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/css/custom_knp.css">
+</head>
+
+<center><body class="pozadi">
+    {% if skore == "VÝHRA" %}
+    <img style="float: left;" src="/static/img/firew.gif">
+    <img style="float: right;" src="/static/img/firew1.gif">
+    <audio autoplay>
+      <source src="/static/img/win.mp3" type="audio/mpeg" >
+    </audio>
+    {% elif skore == "REMÍZA" %}
+    <audio autoplay>
+      <source src="/static/img/remi.mp3" type="audio/mpeg">
+    </audio>
+    {% else %}
+    <audio autoplay>
+      <source src="/static/img/fail.mp3" type="audio/mpeg">
+    </audio>
+    {% endif %}
+<p class={{ skore }}> {{ skore }} </p>
+<div class= "hrac"> 
+  <p>Zahrál jsi: {{ ja }}</p> 
+  <img style="width:200px;height:200px;border:0;" src="/static/img/{{ ja }}.png">
+</div>
+
+<p><a href="/kamen" style="font-size: 20px;">Kámen</a> <a href="/nuzky" style="font-size: 20px;">Nůžky</a> <a href="/papir" style="font-size: 20px;">Papír</a></p>
+
+<div class= "pocitac">
+  <img style="width:200px;height:200px;border:0;" src="/static/img/{{ vysledek }}.png">
+  <p>Počítač zahrál: {{ vysledek }}</p>
+</div>
+</body></center>
+</html>
