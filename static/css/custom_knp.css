@@ -1,0 +1,47 @@
+.pozadi {
+    background-color: rgb(225, 240, 245);
+    font-size:20px;
+}
+
+.hrac{
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    height: 250px;
+    width: 250px;
+}
+
+.pocitac{
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    height: 250x;
+    width: 250px;
+}
+
+.PROHRA{
+    background-color: rgb(247, 184, 184);
+    border: 7px rgb(189, 23, 23);
+    border-style: ridge;
+    height: 33px;
+    width: 150px;
+    font-size:30px;
+}
+.REMÍZA{
+    background-color: rgb(251, 252, 217);
+    border: 7px rgb(252, 255, 47);
+    border-style: ridge;
+    height: 33px;
+    width: 150px;
+    font-size:30px;
+}
+.VÝHRA{
+    background-color: rgb(200, 247, 196);
+    border: 7px rgb(47, 255, 82);
+    border-style: ridge;
+    height: 33px;
+    width: 150px;
+    font-size:30px;
+}
+
+.gif-l{
+    float: left;
+}
