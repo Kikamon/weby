@@ -1,0 +1,45 @@
+.pozadi{
+    background-color: rgba(163, 228, 154, 0.925);
+}
+
+.kostka {
+    background-color: rgba(217, 255, 213, 0.897);
+    font-size:25px;
+
+}
+
+.kostka_pc {
+    background-color: rgba(217, 255, 213, 1);
+    font-size:25px;
+
+}
+
+.vyhra{
+    font-size:30px;
+    background-color: rgba(200, 255, 213, 1);
+    padding: 10px;
+    border-style: dashed;
+    border-radius: 200px;
+    border-width: 2px;
+    margin-bottom: 5px;
+}
+
+.remiza{
+    font-size:30px;
+    background-color: rgba(235, 174, 117);
+    padding: 10px;
+    border-style: dashed;
+    border-radius: 200px;
+    border-width: 2px;
+    margin-bottom: 5px;
+}
+
+.prohra{
+    font-size:30px;
+    background-color: rgba(219, 109, 109);
+    padding: 10px;
+    border-style: dashed;
+    border-radius: 200px;
+    border-width: 2px;
+    margin-bottom: 5px;
+}
