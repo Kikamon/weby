@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hod kostkou</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/css/custom_k.css">
+</head>
+
+<body class = "pozadi">
+<center><div class= "kostka">
+  <p>Tvoje score: {{ score_a }}</p>
+  <img style="width:200px;height:200px;border:2;" src="/static/img/{{ hod }}.png">
+  <p>Hodil jsi: {{ hod }}</p>
+</div></center>
+
+<center><button type="button" onClick="window.location.reload();">Hoď znova</button></center>
+
+<center><div >
+    {% if hod2 > hod %}
+        <p class="prohra">Prohrál jsi..
+
+        </p>
+    {% elif hod2 == hod %}
+        <p class="remiza">Remíza!
+
+        </p>
+    {% else %}
+        <p class="vyhra">Vyhrál jsi!!!</p>
+    {% endif %}
+</div></center>
+
+<center><div class= "kostka_pc">
+  <p>Score počítače: {{ score_b }}</p>
+  <center><img style="width:200px;height:200px;border:0;" src="/static/img/{{ hod2 }} - kopie.png"></center>
+  <p>Počítač hodil: {{ hod2 }}</p>
+</div></center>
+
+</body>
+</html>
